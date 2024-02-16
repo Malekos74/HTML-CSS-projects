@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 300;
+    src: url('font/Outfit-Light.woff2') format('woff2'),
+         url('font/Outfit-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 400;
+    src: url('font/Outfit-Regular.woff2') format('woff2'),
+         url('font/Outfit-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 600;
+    src: url('font/Outfit-SemiBold.woff2') format('woff2'),
+         url('font/Outfit-SemiBold.woff') format('woff');
+}
+
+
+body {
+    font-family: 'Outfit';
+    font-weight: 400;
+    background-color: hsl(217, 54%, 11%);
+    color: hsl(215, 51%, 70%);  
+    word-spacing: 0.125rem; 
+}
+
+.page{
+    display: grid;
+    place-items: center; 
+    min-height: 98vh;
+}
+.attribution {
+    display: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.nft img {
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+.nft svg {
+    position: absolute;
+    z-index: -1;
+    background-color:  hsla(178, 100%, 50%, 0.168);;
+}
+.nft img:hover {
+    z-index: -2;
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    width: 22rem;
+    min-height: 35rem;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 2rem hsla(214, 56%, 8%, 0.201);
+}
+
+.title {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+.text {
+    margin:1.5rem;
+    margin-top:0;
+}
+.desc {
+    margin-top: 0.5rem;
+    font-size: 300;
+}
+
+.info {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20px;
+    grid-template-areas: 'price empty time';
+}
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: price;
+    font-weight: 600;
+    color: hsl(178, 100%, 50%);
+}
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: time;
+}
+.details{
+    display: inline;
+    margin-left: 5px;
+}
+
+.creator {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    width: 80%;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+
+    border-top: 1px hsl(215, 32%, 27%) solid;
+}
+.pfp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0.125rem white solid;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+}
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 0;
+}
+
+
+

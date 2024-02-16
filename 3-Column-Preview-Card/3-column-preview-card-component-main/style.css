@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    src: url('fonts/LeagueSpartan-Regular.woff2') format('woff2'),
+         url('fonts/LeagueSpartan-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    src: url('fonts/BigShouldersDisplay-Bold.woff2') format('woff2'),
+         url('fonts/BigShouldersDisplay-Bold.woff') format('woff');
+}
+
+.attribution {
+    display: none;
+}
+
+html {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.title {
+    font-family: Big Shoulders Display;
+    color: hsl(0, 0%, 95%);
+    font-size: 1.125rem;
+}
+.desc {
+    font-family: Lexend Deca;
+    color: hsla(0, 0%, 100%, 0.75);
+    width: 22ch;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'sedans suv luxury';
+
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.522);
+
+}
+.card-1 {
+    grid-area: sedans;
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.card-2 {
+    grid-area: suv;
+    background-color: hsl(184, 100%, 22%);
+}
+.card-3 {
+    grid-area: luxury;
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+
+
+.card {
+    width: 30vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-areas: 
+    'svg'
+    'title'
+    'desc'
+    'button';
+
+    padding:2rem;
+}
+
+.img {
+    grid-area: svg;
+}
+.title {
+    grid-area: title;
+}
+.desc {
+    grid-area: desc;
+}
+.button {
+    grid-area: button;
+}
+
+button {
+    border: none;
+    background-color:hsl(0, 0%, 95%);
+    width: 60%;
+    height: 40%;
+    border-radius: 100vh;
+    font-family: Lexend Deca;
+    font-size: 1rem;
+}
+.card-1 button {
+    color:hsl(31, 77%, 52%) ;
+}
+.card-2 button {
+    color: hsl(184, 100%, 22%);
+}
+.card-3 button {
+    color: hsl(179, 100%, 13%);
+}
+button:hover {
+    cursor: pointer ;
+    color: hsl(0, 0%, 95%);
+    border: 2px hsl(0, 0%, 95%) solid;
+}
+.card-1 button:hover {
+    background-color:hsl(31, 77%, 52%) ;
+}
+.card-2 button:hover {
+    background-color: hsl(184, 100%, 22%);
+}
+.card-3 button:hover {
+    background-color: hsl(179, 100%, 13%);
+}
+
+@media only screen and (max-width: 905px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200vh;  
+    }
+    .container {
+        display: grid;
+        grid-template-rows: repeat(3,60vh);
+        grid-template-areas: 
+        'sedans'
+        'suv'
+        'luxury';
+
+        width: 37vh;
+    
+        border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+        box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.522);
+    
+    }
+    .card-1 {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .card-3 {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
+

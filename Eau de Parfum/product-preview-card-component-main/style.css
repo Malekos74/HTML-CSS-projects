@@ -1,0 +1,119 @@
+  html, body {
+    height: 100%;
+  }
+  .attribution {
+    display: none;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3eae3;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .desc, h2, h1, p, span {
+    border-radius: 0rem 1rem 1rem 0rem;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 300px;
+  }
+
+  h2, h1, p, span {
+    margin: 2rem;
+    max-width: 300px;
+  }
+
+  h2 {
+    color: #999b9fd2;
+    text-transform:uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    max-width: 300px;
+  }
+
+  h1 {
+    text-transform: capitalize;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    max-width: 300px;
+  }
+
+  p{
+    color: #8d8f93;
+    word-spacing: 0.125rem;
+    max-width: 300px;
+  }
+  .price {
+    color: #377a62;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 3rem;
+    max-width: 300px;
+  }
+  span {
+    display: inline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: black;
+    text-decoration:line-through;
+    font-size: 1rem;
+    margin: 0.125rem;
+  }
+  
+  img.product {
+    content: url("images/image-product-desktop.jpg");
+    width: 300px;
+    height: 450px;
+    border-radius: 1rem 0rem 0rem 1rem;
+  }
+
+  button {
+    display: block;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3d8168;
+    width: 10rem;
+    height: 2rem;
+    color: white;
+    border-radius: 10px;
+    border-color: #3d8168;
+
+  }
+
+  button:hover {
+    background-color: #275344;
+    border-color: #275344;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        max-width: 343px;
+    }
+    img.product {
+      content: url("images/image-product-mobile.jpg");
+      width: 343px;
+      height: 240px;
+      border-radius: 1rem 1rem 0rem 0rem;
+    }
+  
+    .desc {
+      border-radius: 0rem 0rem 1rem 1rem;
+      width: 343px;
+      max-width: 343px;
+    }
+  }
+  
