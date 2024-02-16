@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Barlow';
+    font-weight: 500;
+    src: url('fonts/BarlowSemiCondensed-Medium.woff2') format('woff2'),
+         url('fonts/BarlowSemiCondensed-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Barlow';
+    font-weight: 600;
+    src: url('fonts/BarlowSemiCondensed-SemiBold.woff2') format('woff2'),
+         url('fonts/BarlowSemiCondensed-SemiBold.woff') format('woff');
+}
+
+.attribution{
+    display: none;
+}
+
+html {
+    background-color: hsla(0, 0%, 81%, 0.707);
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+*{
+    font-size: 1rem;
+}
+
+.text{
+    font-family: Barlow;
+    font-weight: 500;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:repeat(4,40vh) ;
+    grid-template-rows: repeat(2,40vh);
+    grid-template-areas: 
+    'card-1 card-1 card-2 card-3'
+    'card-4 card-5 card-5 card-3';
+}
+
+.card {
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-areas: 
+    'img name'
+    'title title'
+    'text text';
+    margin: 1rem;
+    font-family: Barlow;
+    font-weight: 500;
+}
+.img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0.75rem 1.5rem;
+}
+
+.img {
+    grid-area: img;
+}
+.name {
+    grid-area: name;
+    color: white;
+}
+.user-desc {
+    color: rgba(255, 255, 255, 0.529);
+    margin: 0;
+    padding: 0;
+}
+.title {
+    grid-area: title;
+    font-weight: 600;
+    color: white;
+}
+.text {
+    grid-area: text;
+    color: rgba(255, 255, 255, 0.529);
+}
+.white .title {
+    color: gray;
+}
+.white .name {
+    color: gray
+}
+.white .user-desc {
+    color: rgba(128, 128, 128, 0.507);
+}
+.white .text {
+    color: rgba(128, 128, 128, 0.507);
+}
+
+.card-1 {
+    grid-area: card-1;
+    background-color: hsl(263, 55%, 52%);
+}
+.card-2 {
+    grid-area: card-2;
+    background-color: hsl(217, 19%, 35%);
+}
+.card-3 {
+    grid-area: card-3;
+    background-color: white;
+}
+.card-4 {
+    grid-area: card-4;
+    background-color: white;
+}
+.card-5 {
+    grid-area: card-5;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.width1 .title, .width1 .text {
+    width: 30ch;
+    margin: auto;
+}
+.width2 .title, .width2 .text {
+    width: 60ch;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .cards {
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(8,1fr);
+        grid-template-areas: 
+        'card-1'
+        'card-1'
+        'card-2'
+        'card-4'
+        'card-5'
+        'card-5'
+        'card-3'
+        'card-3';
+    }
+  }
+
