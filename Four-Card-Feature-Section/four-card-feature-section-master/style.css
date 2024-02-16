@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
+       url('fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src:url('fonts/Poppins-ExtraLight.woff2') format('woff2'),
+       url('fonts/Poppins-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src:url('fonts/Poppins-Regular.woff2') format('woff2'),
+       url('fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.attribution {
+    display: none;
+}
+
+* {
+    font-family: Poppins;
+    font-weight: 200;
+    font-size: 1rem;
+    color: hsl(229, 6%, 66%);
+}
+
+html {
+    background-color: hsl(0, 0%, 98%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 90vh;
+}
+
+.title {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+.title h1, .title h2 {
+    font-size: 2rem;
+}
+.title h2 {
+    margin-bottom: 0;
+}
+.title h1 {
+    font-weight: 600;
+    margin-top: 0;
+    color: hsl(234, 12%, 34%);
+}
+.title h3 {
+    font-weight: 400;
+    width: 55ch;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    'supervisor team-builder calculator'
+    'supervisor karma calculator';   
+    margin-top: 2rem;
+}
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+.card {
+    position: relative;
+
+    background-color: white;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    border-radius: 0.325rem;
+    height: 14rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.227);
+    width: 19.5rem;
+}
+.card-1 {
+    border-top: 5px hsl(180, 62%, 55%) solid;
+    grid-area: supervisor;
+    align-self: center;
+}
+.card-2 {
+    border-top: 5px hsl(0, 78%, 62%) solid;
+    grid-area: team-builder;
+}
+.card-3 {
+    border-top: 5px hsl(34, 97%, 64%) solid;
+    grid-area: karma;
+}
+.card-4 {
+    border-top: 5px hsl(212, 86%, 64%) solid;
+    grid-area: calculator;
+    align-self: center;
+}
+
+.img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        padding-top: 27rem;
+    }
+
+
+    .title h3 {
+        width: 35ch;
+        margin: auto;
+    }
+    .cards {
+        display: grid;
+        grid-template-rows: repeat(4,20rem);
+        grid-template-areas:
+        'supervisor'
+        'team-builder'
+        'karma'
+        'calculator';
+        margin-top: 2rem;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    .card {
+        width: 16.8rem;
+    }
+
+}
+  
